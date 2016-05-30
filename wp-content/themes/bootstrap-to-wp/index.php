@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <!-- Header -->
 <header>
     <div class="container">
@@ -167,3 +168,5 @@
         </div>
     </div>
 </section>
+
+<?php get_footer(); ?>
