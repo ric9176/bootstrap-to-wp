@@ -25,17 +25,28 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-4 portfolio-item">
+
+
+          <?php
+
+          if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+          ?>
+
+
+              <div class="col-sm-4 portfolio-item">
+                  <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                      <div class="caption">
+                          <div class="caption-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <?php the_post_thumbnail( 'full', array('class' => 'img-responsive') ); ?>
+                  </a>
+              </div>
+          <?php endwhile; ?>
+          <?php endif; ?>
+            <!-- <div class="col-sm-4 portfolio-item">
                 <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
@@ -84,7 +95,7 @@
                     </div>
                     <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
