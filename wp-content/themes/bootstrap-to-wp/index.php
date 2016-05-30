@@ -4,11 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive" src="img/profile.png" alt="">
+                <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/profile.png" alt="">
                 <div class="intro-text">
-                    <span class="name">Start Bootstrap</span>
+                    <span class="name"><?php bloginfo('name'); ?></span>
                     <hr class="star-light">
-                    <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                    <span class="skills"><?php bloginfo('description'); ?></span>
                 </div>
             </div>
         </div>
