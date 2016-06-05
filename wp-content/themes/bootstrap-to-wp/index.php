@@ -103,14 +103,26 @@
 <!-- About Section -->
 <section class="success" id="about">
     <div class="container">
+      <?php
+
+      $args = array(
+        'page_id' => '26',
+      );
+      $wp_query = new WP_Query( $args );
+
+
+      if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post();
+
+      ?>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>About</h2>
+                <h2><?php the_title(); ?></h2>
                 <hr class="star-light">
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-2">
+          <?php the_content(); ?>
+            <!-- <div class="col-lg-4 col-lg-offset-2">
                 <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
             </div>
             <div class="col-lg-4">
@@ -120,8 +132,10 @@
                 <a href="#" class="btn btn-lg btn-outline">
                     <i class="fa fa-download"></i> Download Theme
                 </a>
-            </div>
+            </div> -->
         </div>
+      <?php endwhile; ?>
+      <?php endif; ?>  
     </div>
 </section>
 
