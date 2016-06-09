@@ -121,6 +121,7 @@
             </div>
         </div>
         <div class="row">
+
           <?php the_content(); ?>
             <!-- <div class="col-lg-4 col-lg-offset-2">
                 <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
@@ -135,7 +136,7 @@
             </div> -->
         </div>
       <?php endwhile; ?>
-      <?php endif; ?>  
+      <?php endif; ?>
     </div>
 </section>
 
@@ -149,10 +150,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-12">
                 <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                 <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                <form name="sentMessage" id="contactForm" novalidate>
+                <?php echo do_shortcode( '[contact-form-7 id="32" title="Contact form 1"]' ); ?>
+                <!-- <form name="sentMessage" id="contactForm" novalidate>
+
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Name</label>
@@ -188,7 +191,7 @@
                             <button type="submit" class="btn btn-success btn-lg">Send</button>
                         </div>
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>
